@@ -5,7 +5,7 @@ Script to get Google's search autocomplete data
 ## Usage
 
 ```console
-$ python3 autocomplete.py -h                                                                                                           google-autocomplete/git/master 
+$ python3 autocomplete.py -h 
 usage: autocomplete.py [-h] [-i INP] [-o OUT] [-c]
 
 optional arguments:
