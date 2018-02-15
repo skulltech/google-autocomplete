@@ -40,7 +40,7 @@ def main():
 
             for query in inp:
                 sys.stdout.write('\r[*] Keywords searched: {}'.format(done))
-                writer.writerow(autocomplete(query.rstrip()))
+                writer.writerow([query] + autocomplete(query))
                 done = done + 1
                 sys.stdout.flush()
         print()
