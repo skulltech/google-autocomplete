@@ -2,6 +2,7 @@ import requests
 import argparse
 import csv
 import os
+import sys
 
 
 
@@ -35,9 +36,14 @@ def main():
             writer = csv.writer(csvfile)
             inp = [i.rstrip(os.linesep) for i in inp]
             inp = [i for i in inp if i]
+            done = 0
 
             for query in inp:
+                sys.stdout.write('\r[*] Keywords searched: {}'.format(done))
                 writer.writerow(autocomplete(query.rstrip()))
+                done = done + 1
+                sys.stdout.flush()
+        print()
         print('[*] Done!')
 
 
