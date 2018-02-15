@@ -1,6 +1,7 @@
 import requests
 import argparse
 import csv
+import os
 
 
 
@@ -32,8 +33,11 @@ def main():
         print('[*] Fetching autocomplete data')
         with open(args.out, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
+            inp = [i.rstrip(os.linesep) for i in inp]
+            inp = [i for i in inp if i]
+
             for query in inp:
-                writer.writerow(autocomplete(query))
+                writer.writerow(autocomplete(query.rstrip()))
         print('[*] Done!')
 
 
