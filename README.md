@@ -4,7 +4,7 @@ Script to get Google's search autocomplete data
 
 ## Installation
 
-1. __Clone the repo and change-directory to it__
+__Clone the repo and change directory to it__
 ```console
 $ git clone https://github.com/SkullTech/google-autocomplete.git
 Cloning into 'google-autocomplete'...
@@ -16,7 +16,7 @@ Unpacking objects: 100% (25/25), done.
 $ cd google-autocomplete
 ```
 
-2. __Install requirements__
+__Install requirements__
 ```console
 $ pip3 install -r requirements.txt
 ```
